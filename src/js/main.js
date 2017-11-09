@@ -15,5 +15,8 @@ require(['jquery', './component/preload/preload'], function($, preload) {
             $('img').hide();
         }
     });
-    
+
+
+
+
 });
