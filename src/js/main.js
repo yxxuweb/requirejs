@@ -16,7 +16,13 @@ require(['jquery', './component/preload/preload'], function($, preload) {
         }
     });
 
-
+    $.ajax({
+        url:'http://127.0.0.1:8080/requirejs/src/js/data/data.json'
+    }).done(function (response) {
+        console.info(response);
+    }).fail(function (res) {
+        console.log(res);
+    })
 
 
 });
