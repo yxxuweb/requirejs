@@ -1,4 +1,7 @@
 define(function () {
+    /**
+     * 调用方法： 
+     */
     function throttle() {
         var timer = null;
         var startTime = new Date();
