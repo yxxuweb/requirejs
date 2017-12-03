@@ -1,18 +1,31 @@
 define(function(require) {
-    'use strict';
-    function debounce(method,time){
-        var timer = null ;
-        return function(){
-            var context = this;
-            //在函数执行的时候先清除timer定时器;
-            clearTimeout(timer);
-            timer = setTimeout(function(){
-                method.call(context);
-            },time);
-        }
-    }
-    
-    return {
-        debounce: debounce
-    }
+  'use strict';
+
+  function debounce(fn, delta, context) {
+    var timeoutID = null;
+
+    return function() {
+      clearTimeout(timeoutID);
+
+      var args = arguments;
+      timeoutID = setTimeout(function() {
+        fn.apply(context, args);
+      }, delta);
+    };
+  }
+
+  function Foo(data) {
+    this.data = data;
+  }
+  Foo.prototype.alert = function() {
+    alert(this.data);
+  }
+
+  var foo = new Foo('hello world');
+  var debouncedAlert = debounce(foo.alert, 1000, foo);
+
+  window.onmousemove = debouncedAlert;
+  return {
+    debounce: debounce
+  }
 });
