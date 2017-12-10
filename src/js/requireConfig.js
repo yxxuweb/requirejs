@@ -20,7 +20,7 @@ require.config({
             deps: ['underscore']
         },
         menu: {
-        		deps: ['css!./../css/menu/menu.css']
+        	deps: ['css!./../css/menu/menu.css']
         }
     },
     config: {
