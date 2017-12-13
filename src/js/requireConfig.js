@@ -10,7 +10,8 @@ require.config({
         'template': 'lib/text/template',
         'bootstrap': 'lib/bootstrap/bootstrap.min',
         'underscore': 'lib/underscore/underscore-min',
-        'backbone': 'lib/backbone/backbone-min'
+        'backbone': 'lib/backbone/backbone-min',
+        'menu': 'component/menu/menu'
     },
     shim: {
         bootstrap: {

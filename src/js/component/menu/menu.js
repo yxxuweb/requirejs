@@ -1,6 +1,7 @@
-define(['jquery', 'text!../html/menu/menu.html', './js/function/function.js'], function ($, menu, fn) {
+define(['jquery', 'text!../html/menu/menu.html', './function/function.js'], function ($, menu, fn) {
 
     $('#context').html(menu);
+
     var sub = $('#sub')
 
     var activeRow
